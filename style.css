@@ -186,3 +186,117 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+/* fitur kontak sherly*/
+.hero-banner {
+  background: linear-gradient(180deg, #3d2417 0%, #523322 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 15px;
+  color: #e8d7c8;
+  margin: 0;
+}
+
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: #fdf8f3;
+  border: 1px solid #f2e7dc;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #3d2417;
+  margin-top: 0;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e8dad0;
+}
+
+.item-info {
+  margin-bottom: 14px;
+}
+
+.item-info strong {
+  display: block;
+  color: #3d2417;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.item-info p {
+  margin: 0;
+  color: #5c473a;
+  font-size: 14px;
+}
+
+/* Form Kontak */
+.form-kontak label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  color: #3d2417;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e8dad0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  color: #3d2417;
+  box-sizing: border-box;
+}
+
+.form-kontak input:focus,
+.form-kontak textarea:focus {
+  outline: none;
+  border-color: #3d2417;
+}
+
+#tombol-kirim {
+  margin-top: 16px;
+  width: 100%;
+  padding: 11px;
+  background-color: #3d2417;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#tombol-kirim:hover {
+  background-color: #523322;
+}
+
+#status-form {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
