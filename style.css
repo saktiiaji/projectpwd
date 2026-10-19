@@ -186,3 +186,56 @@ footer {
         font-size: 0.8rem;
     }
 }
+
+/* fitur kontak sherly*/
+.info-kontak p {
+  margin-bottom: 6px;
+  color: #4a3b32;
+}
+
+.form-kontak label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  color: #3d2314;
+  margin-top: 10px;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #e0d0c1;
+  border-radius: 6px;
+  background-color: #fff;
+  font-family: inherit;
+  color: #333;
+}
+
+.form-kontak input:focus,
+.form-kontak textarea:focus {
+  outline: none;
+  border-color: #3d2314;
+}
+
+#tombol-kirim {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #3d2314;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#tombol-kirim:hover {
+  background-color: #5a351f;
+}
+
+#status-form {
+  margin-top: 12px;
+  font-weight: bold;
+}
