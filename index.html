@@ -1,96 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Sederhana</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <!-- Navbar -->
-    <header class="navbar">
-      <h1 class="logo">Kalkulator Sederhana</h1>
-      <nav>
-        <ul class="menu">
-          <li>
-            <a href="#kalkulator">Kalkulator</a>
-          </li>
-          <li>
-            <a href="#panduan">Panduan</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda | Kopi Sudut</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVBAR: jangan diubah, harus sama di semua halaman -->
+  <header class="navbar">
+    <a href="index.html" class="logo">Kopi Sudut</a>
+    <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">Menu</button>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Konten utama -->
-    <main>
-      <!-- Section Kalkulator -->
-      <section id="kalkulator" class="kalkulator">
-        <h2 id="judul">Hitung Dua Angka</h2>
-        <p id="petunjuk">Masukkan dua angka, lalu pilih operasi.</p>
+  <!-- ===== ISI BERANDA (dikerjakan di branch fitur-beranda) ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Kopi pertama hari ini, di sudut yang tenang.</h1>
+      <p>Biji pilihan dari petani lokal, disangrai tiap pagi dan diseduh sesuai seleramu.</p>
+      <a href="kontak.html" class="btn">Kunjungi kami</a>
+    </div>
+  </section>
 
-        <!-- Kartu Kalkulator -->
-        <article class="kartu">
-          <!-- Input angka pertama -->
-          <label for="angka-a"> Angka pertama </label>
-          <input type="number" id="angka-a" placeholder="Contoh: 8" />
+  <main>
+    <section>
+      <h2>Menu unggulan</h2>
+      <div class="menu-grid">
+        <article class="menu-item"><h3>Es Kopi Susu Sudut</h3><p>Espresso, susu segar, gula aren.</p><p class="harga">Rp 22.000</p></article>
+        <article class="menu-item"><h3>V60 Single Origin</h3><p>Seduhan manual, rasa berubah tiap bulan.</p><p class="harga">Rp 28.000</p></article>
+        <article class="menu-item"><h3>Roti Bakar Cokelat</h3><p>Teman kopi yang pas untuk sore.</p><p class="harga">Rp 18.000</p></article>
+      </div>
+    </section>
+  </main>
 
-          <!-- Input angka kedua -->
-          <label for="angka-b"> Angka kedua </label>
-          <input type="number" id="angka-b" placeholder="Contoh: 2" />
-
-          <!-- Tombol operasi -->
-          <div class="tombol-grid">
-            <button id="tombol-tambah" type="button">+</button>
-            <button id="tombol-kurang" type="button">-</button>
-            <button id="tombol-kali" type="button">×</button>
-            <button id="tombol-bagi" type="button">÷</button>
-          </div>
-
-          <!-- Tombol hapus -->
-          <button id="tombol-hapus" class="hapus" type="button">Hapus</button>
-
-          <!-- Hasil perhitungan -->
-          <p id="hasil" class="hasil">Hasil: 0</p>
-
-          <!-- Statistik -->
-          <p id="statistik">Jumlah perhitungan: 0</p>
-
-          <!-- Sifat hasil -->
-          <p id="sifat-hasil">Sifat hasil: -</p>
-
-          <!-- Tombol panduan -->
-          <button id="tombol-panduan" type="button">Tampilkan Panduan</button>
-        </article>
-      </section>
-
-      <!-- Section Panduan -->
-      <section id="panduan" style="display: none">
-        <h2>Panduan Penggunaan</h2>
-        <ol>
-          <li>Masukkan angka pertama.</li>
-          <li>Masukkan angka kedua.</li>
-          <li>Pilih salah satu operasi: tambah, kurang, kali, atau bagi.</li>
-          <li>Hasil perhitungan akan ditampilkan pada bagian hasil.</li>
-          <li>
-            Statistik jumlah perhitungan akan bertambah setiap kali perhitungan
-            berhasil.
-          </li>
-          <li>Gunakan tombol Hapus untuk mengosongkan kedua input.</li>
-          <li>
-            Gunakan tombol Tampilkan Panduan untuk melihat atau menyembunyikan
-            panduan.
-          </li>
-        </ol>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <p id="info-pembuat">&copy; 2026 Praktikum Pemrograman Web Dasar</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-  </body>
+  <footer><p>&copy; 2026 Kopi Sudut. Semua hak dilindungi.</p></footer>
+  <script src="script.js"></script>
+</body>
 </html>
