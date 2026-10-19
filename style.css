@@ -15,14 +15,21 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
 [id] { scroll-margin-top: 90px; }
 
 body {
   background-color: var(--bg-cream-light);
   color: var(--text-dark);
   line-height: 1.6;
+  overflow-x: hidden;          /* cegah geser horizontal */
+  overflow-wrap: break-word;   /* teks panjang tidak keluar layar */
 }
+
+img, video, svg { max-width: 100%; height: auto; }
 
 :focus-visible { outline: 3px solid var(--brown-coffee); outline-offset: 3px; }
 
@@ -41,7 +48,12 @@ body {
   color: var(--bg-cream-light);
 }
 .logo { font-size: 22px; }
-.menu { display: flex; gap: 24px; list-style: none; }
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+}
 .menu a {
   color: var(--bg-cream-light);
   text-decoration: none;
@@ -60,11 +72,6 @@ footer {
   color: var(--accent-cream);
   font-size: 0.85rem;
   margin-top: 40px;
-}
-
-@media (max-width: 600px) {
-  .navbar { flex-direction: column; }
-  .menu { gap: 14px; }
 }
 
 /* ===== BAGIAN MAHASISWA 2 (Beranda) ===== */
@@ -138,27 +145,71 @@ footer {
   .container { max-width: 1000px; }
   .hero h1 { font-size: 2.8rem; }
   .card { padding: 30px; }
+  .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .menu-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 }
 
-/* Tablet (maksimal 1024px) */
+/* Tablet (601px - 1024px) */
 @media (max-width: 1024px) {
+  .navbar { padding: 14px 24px; }
+  .menu { gap: 18px; }
+
+  main { padding: 28px 20px; }
+
   .hero { padding: 50px 20px; }
   .hero h1 { font-size: 2.2rem; }
-  .container { margin: 30px auto; padding: 0 20px; }
-  .grid, .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+
+  .container { margin: 30px auto; padding: 0 20px; gap: 22px; }
+  .card { padding: 22px; }
+
+  /* auto-fit supaya kolom menyesuaikan lebar, tidak dipaksa 2 kolom */
+  .grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .menu-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
 }
 
 /* Smartphone (maksimal 600px) */
 @media (max-width: 600px) {
+  [id] { scroll-margin-top: 130px; } /* navbar jadi lebih tinggi di HP */
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px 16px;
+  }
+  .logo { font-size: 20px; }
+  .menu {
+    justify-content: center;
+    gap: 10px 16px;
+  }
+  .menu a { display: inline-block; padding: 6px 2px; } /* area sentuh lebih besar */
+
+  main { padding: 20px 14px; }
+
   .hero { padding: 35px 15px; }
-  .hero h1 { font-size: 1.6rem; }
+  .hero h1 { font-size: 1.6rem; letter-spacing: 0.5px; }
   .hero p { font-size: 0.95rem; }
+
   .container { margin: 20px auto; padding: 0 12px; gap: 18px; }
-  .card { padding: 16px; }
+  .card { padding: 16px; border-radius: 10px; }
   .card h2 { font-size: 1.25rem; }
+
   .grid, .menu-grid { grid-template-columns: 1fr; gap: 12px; }
   .menu-item { padding: 12px; }
-  footer { padding: 15px 10px; font-size: 0.8rem; }
+
+  footer { padding: 15px 10px; font-size: 0.8rem; margin-top: 28px; }
+}
+
+/* HP kecil (maksimal 380px) */
+@media (max-width: 380px) {
+  .logo { font-size: 18px; }
+  .menu { gap: 8px 12px; font-size: 0.9rem; }
+  .hero h1 { font-size: 1.4rem; }
+  .card h2 { font-size: 1.15rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 /* Tentang Ocid Yang Bikin*/
 :root {
