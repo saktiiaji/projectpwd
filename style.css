@@ -74,8 +74,6 @@ footer {
   margin-top: 40px;
 }
 
-/* ===== BAGIAN MAHASISWA 2 (Beranda) ===== */
-/* ===== BAGIAN MAHASISWA 3 (Tentang): komponen halaman, juga dipakai Beranda ===== */
 .hero {
   background: linear-gradient(135deg, var(--brown-deep), var(--brown-coffee));
   color: var(--bg-cream-light);
@@ -140,77 +138,74 @@ footer {
 .menu-item h3 { color: var(--brown-coffee); font-size: 1.1rem; margin-bottom: 5px; }
 .menu-item p { font-size: 0.9rem; color: #555; }
 
-/* Laptop / PC (di atas 1024px) */
+/* Laptop / PC (Lebar di atas 1024px) */
 @media (min-width: 1025px) {
-  .container { max-width: 1000px; }
-  .hero h1 { font-size: 2.8rem; }
-  .card { padding: 30px; }
-  .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-  .menu-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .container {
+        max-width: 1000px;
+    }
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    .card {
+        padding: 30px;
+    }
 }
 
-/* Tablet (601px - 1024px) */
+/* Tablet (Lebar antara 601px - 1024px) */
 @media (max-width: 1024px) {
-  .navbar { padding: 14px 24px; }
-  .menu { gap: 18px; }
-
-  main { padding: 28px 20px; }
-
-  .hero { padding: 50px 20px; }
-  .hero h1 { font-size: 2.2rem; }
-
-  .container { margin: 30px auto; padding: 0 20px; gap: 22px; }
-  .card { padding: 22px; }
-
-  /* auto-fit supaya kolom menyesuaikan lebar, tidak dipaksa 2 kolom */
-  .grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-  .menu-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .hero {
+        padding: 50px 20px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .container {
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+    .grid,
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
-/* Smartphone (maksimal 600px) */
+/* Android / Smartphone (Lebar maksimal 600px) */
 @media (max-width: 600px) {
-  [id] { scroll-margin-top: 130px; } /* navbar jadi lebih tinggi di HP */
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 12px 16px;
-  }
-  .logo { font-size: 20px; }
-  .menu {
-    justify-content: center;
-    gap: 10px 16px;
-  }
-  .menu a { display: inline-block; padding: 6px 2px; } /* area sentuh lebih besar */
-
-  main { padding: 20px 14px; }
-
-  .hero { padding: 35px 15px; }
-  .hero h1 { font-size: 1.6rem; letter-spacing: 0.5px; }
-  .hero p { font-size: 0.95rem; }
-
-  .container { margin: 20px auto; padding: 0 12px; gap: 18px; }
-  .card { padding: 16px; border-radius: 10px; }
-  .card h2 { font-size: 1.25rem; }
-
-  .grid, .menu-grid { grid-template-columns: 1fr; gap: 12px; }
-  .menu-item { padding: 12px; }
-
-  footer { padding: 15px 10px; font-size: 0.8rem; margin-top: 28px; }
+    .hero {
+        padding: 35px 15px;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    .container {
+        margin: 20px auto;
+        padding: 0 12px;
+        gap: 18px;
+    }
+    .card {
+        padding: 16px;
+    }
+    .card h2 {
+        font-size: 1.25rem;
+    }
+    .grid, 
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .menu-item {
+        padding: 12px;
+    }
+    footer {
+        padding: 15px 10px;
+        font-size: 0.8rem;
+    }
 }
 
-/* HP kecil (maksimal 380px) */
-@media (max-width: 380px) {
-  .logo { font-size: 18px; }
-  .menu { gap: 8px 12px; font-size: 0.9rem; }
-  .hero h1 { font-size: 1.4rem; }
-  .card h2 { font-size: 1.15rem; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-}
 /* Tentang Ocid Yang Bikin*/
 :root {
     --bg-cream-light: #FDFBF7;
