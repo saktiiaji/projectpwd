@@ -1,3 +1,165 @@
+/* Beranda */
+:root {
+  --bg-cream-light: #FDFBF7;
+  --bg-cream-soft: #F4EAE1;
+  --accent-cream: #E6D5C3;
+  --text-dark: #2B1B17;
+  --brown-coffee: #6F4E37;
+  --brown-deep: #3D2314;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 90px; }
+
+body {
+  background-color: var(--bg-cream-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+:focus-visible { outline: 3px solid var(--brown-coffee); outline-offset: 3px; }
+
+/* ===== BAGIAN UMUM (Ketua): navbar dan footer ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 32px;
+  background-color: var(--brown-deep);
+  color: var(--bg-cream-light);
+}
+.logo { font-size: 22px; }
+.menu { display: flex; gap: 24px; list-style: none; }
+.menu a {
+  color: var(--bg-cream-light);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+.menu a:hover { border-bottom-color: var(--accent-cream); }
+
+main { max-width: 1000px; margin: 0 auto; padding: 32px 20px; }
+main h2 { margin-bottom: 12px; color: var(--brown-deep); }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--brown-deep);
+  color: var(--accent-cream);
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; }
+  .menu { gap: 14px; }
+}
+
+/* ===== BAGIAN MAHASISWA 2 (Beranda) ===== */
+/* ===== BAGIAN MAHASISWA 3 (Tentang): komponen halaman, juga dipakai Beranda ===== */
+.hero {
+  background: linear-gradient(135deg, var(--brown-deep), var(--brown-coffee));
+  color: var(--bg-cream-light);
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 5px solid var(--bg-cream-soft);
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 1px; }
+.hero p { font-size: 1.1rem; color: var(--accent-cream); }
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card {
+  background: linear-gradient(180deg, #FFFFFF, var(--bg-cream-soft));
+  border: 1px solid var(--accent-cream);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(61, 35, 20, 0.05);
+}
+.card h2 {
+  color: var(--brown-deep);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--accent-cream);
+  padding-bottom: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.info-list { list-style: none; }
+.info-list li { padding: 6px 0; }
+
+.highlight {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--brown-coffee);
+  font-weight: 600;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+.menu-item {
+  background-color: var(--bg-cream-light);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--brown-coffee);
+}
+.menu-item h3 { color: var(--brown-coffee); font-size: 1.1rem; margin-bottom: 5px; }
+.menu-item p { font-size: 0.9rem; color: #555; }
+
+/* Laptop / PC (di atas 1024px) */
+@media (min-width: 1025px) {
+  .container { max-width: 1000px; }
+  .hero h1 { font-size: 2.8rem; }
+  .card { padding: 30px; }
+}
+
+/* Tablet (maksimal 1024px) */
+@media (max-width: 1024px) {
+  .hero { padding: 50px 20px; }
+  .hero h1 { font-size: 2.2rem; }
+  .container { margin: 30px auto; padding: 0 20px; }
+  .grid, .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+}
+
+/* Smartphone (maksimal 600px) */
+@media (max-width: 600px) {
+  .hero { padding: 35px 15px; }
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: 0.95rem; }
+  .container { margin: 20px auto; padding: 0 12px; gap: 18px; }
+  .card { padding: 16px; }
+  .card h2 { font-size: 1.25rem; }
+  .grid, .menu-grid { grid-template-columns: 1fr; gap: 12px; }
+  .menu-item { padding: 12px; }
+  footer { padding: 15px 10px; font-size: 0.8rem; }
+}
 /* Tentang Ocid Yang Bikin*/
 :root {
     --bg-cream-light: #FDFBF7;

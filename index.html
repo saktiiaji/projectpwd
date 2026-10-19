@@ -1,48 +1,93 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beranda | Kopi Sudut</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kopi Emperan Deso</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- NAVBAR: jangan diubah, harus sama di semua halaman -->
+  <!-- Navbar: menu mengarah ke bagian di halaman ini -->
   <header class="navbar">
-    <a href="index.html" class="logo">Kopi Sudut</a>
-    <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">Menu</button>
+    <h1 class="logo">Kopi Emperan Deso</h1>
     <nav>
       <ul class="menu">
-        <li><a href="index.html" class="active">Beranda</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#kontak">Kontak</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ===== ISI BERANDA (dikerjakan di branch fitur-beranda) ===== -->
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Kopi pertama hari ini, di sudut yang tenang.</h1>
-      <p>Biji pilihan dari petani lokal, disangrai tiap pagi dan diseduh sesuai seleramu.</p>
-      <a href="kontak.html" class="btn">Kunjungi kami</a>
+  <!-- ===== BERANDA ===== -->
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <h1>Selamat Datang di Kopi Emperan Deso</h1>
+      <p>Nikmati secangkir rasa hangat dalam keheningan dan kenyamanan.</p>
     </div>
   </section>
 
-  <main>
-    <section>
-      <h2>Menu unggulan</h2>
+  <main class="container">
+    <!-- ===== TENTANG ===== -->
+    <section class="card" id="tentang">
+      <h2>Tentang Kami</h2>
+      <p>
+        Kopi Emperan Deso hadir sebagai ruang singgah bagi Anda yang ingin menikmati seduhan kopi berkualitas tinggi dengan suasana yang tenang. Kami menyajikan pilihan biji kopi terbaik yang diseduh langsung oleh barista berdedikasi.
+      </p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Jam Operasional</h2>
+        <ul class="info-list">
+          <li><strong>Senin - Jumat:</strong> 08:00 - 22:00 WIB</li>
+          <li><strong>Sabtu - Minggu:</strong> 09:00 - 23:00 WIB</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Lokasi Kami</h2>
+        <p>Jl. Serayu No. 12, Cilacap, Jawa Tengah</p>
+        <p class="highlight">Tersedia Wi-Fi &amp; Area Smoking/Non-Smoking</p>
+      </section>
+    </div>
+
+    <!-- Menu Favorit -->
+    <section class="card">
+      <h2>Menu Favorit</h2>
       <div class="menu-grid">
-        <article class="menu-item"><h3>Es Kopi Susu Sudut</h3><p>Espresso, susu segar, gula aren.</p><p class="harga">Rp 22.000</p></article>
-        <article class="menu-item"><h3>V60 Single Origin</h3><p>Seduhan manual, rasa berubah tiap bulan.</p><p class="harga">Rp 28.000</p></article>
-        <article class="menu-item"><h3>Roti Bakar Cokelat</h3><p>Teman kopi yang pas untuk sore.</p><p class="harga">Rp 18.000</p></article>
+        <div class="menu-item">
+          <h3>Ekspresso Warmth</h3>
+          <p>Ekstrak kopi murni dengan aroma pekat yang kaya rasa.</p>
+        </div>
+        <div class="menu-item">
+          <h3>Creamy Latte</h3>
+          <p>Perpaduan ekspresso dan susu lembut dengan rasa gurih manis.</p>
+        </div>
+        <div class="menu-item">
+          <h3>Kopi Tubruk Nusantara</h3>
+          <p>Seduhan tradisional dari biji kopi lokal pilihan.</p>
+        </div>
       </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section class="card" id="kontak">
+      <h2>Hubungi Kami</h2>
+      <ul class="info-list">
+        <li><strong>Alamat:</strong> Jl. Serayu No. 12, Cilacap, Jawa Tengah</li>
+        <li><strong>WhatsApp:</strong> 0812-0000-0000</li>
+        <li><strong>Instagram:</strong> @kopiemperandeso</li>
+        <li><strong>Email:</strong> halo@kopiemperandeso.id</li>
+      </ul>
+      <p class="highlight">Kami membalas pesan setiap hari pada jam buka.</p>
     </section>
   </main>
 
-  <footer><p>&copy; 2026 Kopi Sudut. Semua hak dilindungi.</p></footer>
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2026 Kopi Emperan Deso. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
-</html>
+</html>s
