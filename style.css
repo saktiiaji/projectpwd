@@ -125,6 +125,8 @@ footer {
   padding-bottom: 8px;
 }
 
+.card-intro { margin-bottom: 15px; color: #555; }
+
 /* ---------- Menu Favorit ---------- */
 .menu-grid {
   display: grid;
@@ -205,6 +207,7 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
 /* Tentang Ocid Yang Bikin*/
 :root {
     --bg-cream-light: #FDFBF7;
