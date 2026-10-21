@@ -1,12 +1,32 @@
-const tombolTema = document.getElementById('tombol-tema');
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    
+    const navMenu = document.querySelector('.menu');
+    const toggleLi = document.createElement('li');
+    const themeToggleBtn = document.createElement('button');
+    
+    themeToggleBtn.id = 'tombol-tema';
+    themeToggleBtn.textContent = 'Mode Gelap';
+    
+    toggleLi.appendChild(themeToggleBtn);
+    navMenu.appendChild(toggleLi);
 
-if (localStorage.getItem('tema') === 'gelap') {
-    document.body.classList.add('gelap');
-    tombolTema.textContent = 'Mode Terang';
-}
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggleBtn.textContent = 'Mode Terang';
+    }
 
-tombolTema.addEventListener('click', function () {
-    const gelap = document.body.classList.toggle('gelap');
-    tombolTema.textContent = gelap ? 'Mode Terang' : 'Mode Gelap';
-    localStorage.setItem('tema', gelap ? 'gelap' : 'terang');
+    // Fungsi tombol untuk mengubah tema
+    themeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+            themeToggleBtn.textContent = 'Mode Terang';
+        } else {
+            localStorage.setItem('theme', 'light');
+            themeToggleBtn.textContent = 'Mode Gelap';
+        }
+    });
 });
