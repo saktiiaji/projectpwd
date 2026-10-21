@@ -1,4 +1,3 @@
-/* --- PALET WARNA & VARIABEL TEMA --- */
 :root {
     --bg-color: #f9f8f6;          /* Putih tulang / cream sangat lembut */
     --text-color: #2b2b2b;        /* Hitam arang / abu sangat gelap */
@@ -240,7 +239,6 @@ body.dark-mode .menu-item h3 {
     font-weight: 500;
 }
 
-/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 2rem;
@@ -250,7 +248,6 @@ footer {
     margin-top: 3rem;
 }
 
-/* --- RESPONSIF MEDIA QUERY --- */
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
@@ -267,7 +264,6 @@ footer {
     }
 }
 
-/* --- RESPONSIF UNTUK TABLET (769px - 1024px) --- */
 @media (min-width: 769px) and (max-width: 1024px) {
     .container, main {
         max-width: 90%;
@@ -283,7 +279,7 @@ footer {
     }
 
     .grid {
-        grid-template-columns: 1fr 1fr; /* Tetap 2 kolom tapi lebih longgar */
+        grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
     }
 }
