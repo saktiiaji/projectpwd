@@ -1,32 +1,34 @@
+/* --- PALET WARNA & VARIABEL TEMA (Biru, Abu, Hitam, Putih, Biru Muda) --- */
 :root {
-    --bg-color: #f9f8f6;          /* Putih tulang / cream sangat lembut */
-    --text-color: #2b2b2b;        /* Hitam arang / abu sangat gelap */
+    --bg-color: #f4f7f9;          /* Putih keabuan lembut */
+    --text-color: #1e293b;        /* Hitam arang / abu sangat gelap */
     --card-bg: #ffffff;           /* Putih bersih */
     --navbar-bg: #ffffff;         /* Putih */
-    --navbar-text: #3e2723;       /* Cokelat tua */
-    --border-color: #e0dcd0;      /* Abu-abu cream terang */
-    --hero-bg: #4e342e;           /* Cokelat tua klasik */
+    --navbar-text: #1d4ed8;       /* Biru utama */
+    --border-color: #cbd5e1;      /* Abu-abu terang */
+    --hero-bg: #1e3a8a;           /* Biru tua klasik */
     --hero-text: #ffffff;         /* Putih */
-    --highlight-color: #8d6e63;   /* Cokelat muda */
-    --accent-color: #d7ccc8;      /* Cream lembut */
+    --highlight-color: #3b82f6;   /* Biru muda / terang */
+    --accent-color: #93c5fd;      /* Biru muda lembut */
     --input-bg: #ffffff;          /* Putih */
 }
 
-
+/* Pengaturan Mode Gelap (Dark Mode) */
 body.dark-mode {
-    --bg-color: #121212;
-    --text-color: #f5f5f5;
-    --card-bg: #1e1e1e;
-    --navbar-bg: #1e1e1e;
-    --navbar-text: #d7ccc8;
-    --border-color: #333333;
-    --hero-bg: #271c18;
-    --hero-text: #f5f5f5;
-    --highlight-color: #bcaaa4;
-    --accent-color: #4e342e;
-    --input-bg: #2a2a2a;
+    --bg-color: #0f172a;          /* Hitam kebiruan */
+    --text-color: #f1f5f9;        /* Putih tulang */
+    --card-bg: #1e293b;           /* Abu-abu gelap / hitam arang */
+    --navbar-bg: #1e293b;         /* Abu-abu gelap */
+    --navbar-text: #60a5fa;       /* Biru muda */
+    --border-color: #334155;      /* Abu-abu gelap */
+    --hero-bg: #0f172a;           /* Biru tua gelap */
+    --hero-text: #f1f5f9;         /* Putih */
+    --highlight-color: #60a5fa;   /* Biru muda */
+    --accent-color: #1e3a8a;      /* Biru tua */
+    --input-bg: #0f172a;          /* Abu-abu gelap untuk form */
 }
 
+/* --- RESET & GAYA DASAR --- */
 * {
     margin: 0;
     padding: 0;
@@ -41,6 +43,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* --- NAVBAR --- */
 .navbar {
     background-color: var(--navbar-bg);
     display: flex;
@@ -79,7 +82,7 @@ body {
     color: var(--highlight-color);
 }
 
-/*untuk tombol pergantian mode */
+/* --- TOMBOL MODE GELAP (DINAMIS DARI JS) --- */
 #theme-toggle {
     background-color: var(--accent-color);
     border: 1px solid var(--border-color);
@@ -96,24 +99,27 @@ body {
     color: #ffffff;
 }
 
+/* --- HERO SECTION TANPA GRADASI --- */
 .hero {
     background-color: var(--hero-bg);
     color: var(--hero-text);
     text-align: center;
-    padding: 4rem 1rem;
-    transition: background-color 0.3s ease;
+    padding: 4.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hero h1 {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
+    color: var(--hero-text);
 }
 
 .hero p {
     font-size: 1.1rem;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
+/* --- KONTROL UTAMA & KARTU --- */
 main, .container {
     max-width: 1000px;
     margin: 2rem auto;
@@ -134,7 +140,7 @@ main, .container {
 
 .card h2 {
     margin-bottom: 0.75rem;
-    color: var(--text-color);
+    color: var(--highlight-color);
     font-size: 1.4rem;
 }
 
@@ -143,6 +149,7 @@ main, .container {
     font-size: 0.95rem;
 }
 
+/* --- GRID LAYOUT --- */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -194,6 +201,7 @@ body.dark-mode .menu-item h3 {
     margin-bottom: 0.5rem;
 }
 
+/* --- FORM KONTAK --- */
 .form-kontak {
     display: flex;
     flex-direction: column;
@@ -239,6 +247,7 @@ body.dark-mode .menu-item h3 {
     font-weight: 500;
 }
 
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 2rem;
@@ -248,6 +257,7 @@ footer {
     margin-top: 3rem;
 }
 
+/* --- RESPONSIF MEDIA QUERY (HP) --- */
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
@@ -264,6 +274,7 @@ footer {
     }
 }
 
+/* --- RESPONSIF UNTUK TABLET (769px - 1024px) --- */
 @media (min-width: 769px) and (max-width: 1024px) {
     .container, main {
         max-width: 90%;
